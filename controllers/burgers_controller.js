@@ -4,9 +4,7 @@ var router = express.Router();
 
 router.get('/', function(req, res){
     burger.selectAll(function(data){
-        res.render('index', {
-            burger: data
-        });
+        res.render('index', {burger: data});
     });
 });
 

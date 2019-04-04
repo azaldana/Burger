@@ -13,7 +13,7 @@
 					{{#unless devoured}}
 					  {{!-- add and if devoured equals false --}}
 					  	<li>
-					  		<p><span class="label">ID:</span> {{this.id}} {{this.burger_name}}    
+					  		<p> {{this.id}} {{this.burger_name}}
 					      
 						    <form action="/update/{{this.id}}?_method=PUT" method="POST">
 						        <input type="hidden" name="id" value="{{this.id}}">
@@ -42,7 +42,7 @@
 
 {{!-- add another list for being devoured equal true --}}
 			<h2>Create a new burger!</h2>
-<div class="row">
+<div class="row newBurger">
 	<div class="center-block">
 			<form class="create-form" action="/create" method="POST">
 
