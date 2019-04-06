@@ -2,7 +2,7 @@
 
 Bob's Burgers is a restaurant app that lets users input the names of burgers they'd like to eat.
 
-[Burger App Link](https://stormy-refuge-22829.herokuapp.com/ "Burger App Link")
+[Burger App Link](https://arcane-gorge-30017.herokuapp.com/ "Burger App Link")
 
 ## Description
 
