@@ -14,7 +14,7 @@ router.post('/create', function(req, res){
     });
 });
 
-router.put('/update/:id', function(req, res){
+router.post('/update/:id', function(req, res){
     burger.updateOne(req.params.id, function(err, data){
         res.redirect('/');
     })

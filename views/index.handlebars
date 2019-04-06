@@ -1,58 +1,68 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Burger Time!</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    <h1 class="display-4">Bob's Burgers</h1>
+    <p class="lead">Grand Re-Re-Re-Re-Opening</p>
   </div>
 </div>
-    
+
+<br>
+
 <!-- this is index.handlebars -->
-	<div class="row">
-		<div class="col-lg-6">
-			<ul>	
-				{{#each burger}}
-					{{#unless devoured}}
-					  {{!-- add and if devoured equals false --}}
-					  	<li>
-					  		<p> {{this.id}} {{this.burger_name}}
-					      
-						    <form action="/update/{{this.id}}?_method=PUT" method="POST">
-						        <input type="hidden" name="id" value="{{this.id}}">
-						        <button type="submit">Devour it</button>
-					      	</form>
-					      	</p>
-					  	</li>
-					 {{/unless}}
-				{{/each}}
-			</ul>
-		</div>
+<div class="row">
+  <div class="col-lg-6">
+    <ul>
+      <p class="headline">- Pick a Burger to Eat -</p><br><br>
+      {{#each burger}}
+      {{#unless devoured}}
+      {{!-- add and if devoured equals false --}}
+      {{!-- <li> --}}
+      <p> {{this.id}}. {{this.burger_name}}
 
-		<div class="col-lg-6">
-			<ul>
-				{{#each burger}}
-					{{#if devoured}}
-						<li>
-							<p>{{this.id}} {{this.burger_name}} </p>
-						</li>
-					{{/if}}
-				{{/each}}
-			</ul>
+        <form action="/update/{{this.id}}" method="POST">
+          <input type="hidden" name="id" value="{{this.id}}">
+          <button type="submit" class ="rounded">Devour it</button>
+        </form>
+      </p>
+      <br>
+      {{!-- </li> --}}
+      {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
 
-		</div>
-	</div>
+  <div class="col-lg-6">
+    <ul>
+      <p class="headline">- Devoured Burgers -</p><br><br>
+      {{#each burger}}
+      {{#if devoured}}
+      <p> {{this.id}}. {{this.burger_name}}</p>
+      <hr>
+      <br>
 
-{{!-- add another list for being devoured equal true --}}
-			<h2>Create a new burger!</h2>
-<div class="row newBurger">
-	<div class="center-block">
-			<form class="create-form" action="/create" method="POST">
+      {{/if}}
+      {{/each}}
+    </ul>
 
-			  <div class="form-group">
-			    <label for="quo"></label>
-			    <textarea id="quo" name="type" rows="8" cols="40"></textarea>
-			  </div>
+  </div>
+</div>
 
-			  <button type="submit">Submit</button>
-			</form>
-		</di>
-	</div>
+<br>
+
+<div class="left">
+  <h2>Create a new burger!</h2>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="center-block">
+        <form class="create-form" action="/create" method="POST">
+
+          <div class="form-group">
+            <label for="quo"></label>
+            <textarea id="quo" name="type" rows="8" cols="40"></textarea>
+          </div>
+
+          <button type="submit" class="rounded submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>

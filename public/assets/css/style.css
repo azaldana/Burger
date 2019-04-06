@@ -1,18 +1,31 @@
 .jumbotron {
     text-align: center;
+    background-color: transparent !important;
+    border-bottom: 2px solid rgb(73, 180, 207);
+    border-top: 2px solid rgb(73, 180, 207);
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 50px;
 }
 
 .display-4 {
-    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-.lead {
-    text-align: center;
+.lead, p, h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
 }
 
-    
-#header{
-	text-align: center;
+.headline {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
 }
 
 .burgerInput{
@@ -23,6 +36,39 @@
 	text-align: center;
 }
 
-h2 {
-    margin-left: 100px;
+.left {
+    margin-left: 15%;
+    margin-bottom: 50px;
+    float: left;
+    /* margin-top: -100px; */
+}
+
+hr {
+    width: 25%;
+    color: rgb(73, 180, 207);
+}
+
+button {
+    border: 1px solid rgb(73, 180, 207);
+    color: rgb(73, 180, 207);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.rounded {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    color: white;
+    background-color: rgb(73, 180, 207);
+}
+
+.left h2 {
+    font-size: 25px;
+}
+
+.left .submit {
+    margin-left: -90px;
 }
